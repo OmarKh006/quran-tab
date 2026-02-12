@@ -63,12 +63,28 @@ a {
 
 /* End CSS Reset */
 
+.button {
+  background-color: var(--color-soft-blue);
+  border-radius: var(--default-radius);
+  padding: 1.2rem 2.4rem;
+  color: var(--color-off-white);
+  font-weight: 500;
+  font-size: 1.2rem;
+  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+
+  &--secondary {
+    background-color: var(--color-off-white);
+    color: var(--color-very-dark-blue);
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
   max-width: var(--desktop-width);
   margin: 0 auto;
   padding: 0 var(--default-padding);
+  gap: calc(var(--default-padding) * 4);
 }
 
 .header {
@@ -103,5 +119,42 @@ a {
     &:hover {
       color: var(--color-soft-red);
     }
+  }
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--default-padding) * 2);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: calc(var(--default-padding) / 2);
+  }
+
+  &:nth-of-type(1) &__title {
+    font-size: 4.2rem;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    color: var(--color-grayish-blue);
+  }
+
+  &__buttons {
+    display: flex;
+    gap: var(--default-padding);
+    margin-top: var(--default-padding);
+  }
+
+  &__imgContent {
+    display: flex;
+    flex: 1;
+  }
+
+  &__img {
+    max-width: 100%;
   }
 }
