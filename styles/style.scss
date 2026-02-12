@@ -224,3 +224,14 @@ a {
     }
   }
 }
+
+.faq {
+  max-width: 50rem;
+  margin-top: calc(var(--default-padding) * 1.5);
+  border-top: 0.1rem solid var(--color-grayish-blue);
+  border-bottom: 0.1rem solid var(--color-grayish-blue);
+
+  &__row {
+    padding: var(--default-padding) 0;
+  }
+}

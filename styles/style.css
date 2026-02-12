@@ -203,4 +203,14 @@ a {
   top: calc(var(--default-padding) * -1.4);
   left: calc(var(--default-padding) * -1);
   right: calc(var(--default-padding) * -1);
+}
+
+.faq {
+  max-width: 50rem;
+  margin-top: calc(var(--default-padding) * 1.5);
+  border-top: 0.1rem solid var(--color-grayish-blue);
+  border-bottom: 0.1rem solid var(--color-grayish-blue);
+}
+.faq__row {
+  padding: var(--default-padding) 0;
 }/*# sourceMappingURL=style.css.map */
