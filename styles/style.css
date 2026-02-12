@@ -59,64 +59,42 @@ a {
 }
 
 /* End CSS Reset */
-:root {
-  --color-soft-blue: #5368df;
-  --color-soft-red: #fa5757;
-  --color-grayish-blue: #9194a1;
-  --color-very-dark-blue: #252b46;
-  --color-off-white: #f7f7f7;
-  --default-padding: 2rem;
-  --default-radius: 0.4rem;
-  --desktop-width: 900px;
-  --tablet-width: 600px;
-  --timing-animation: 0.2s;
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding: 0 var(--default-padding);
 }
 
-/* CSS Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--default-padding);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.logoContent {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.logoContent__img {
+  width: 4rem;
+  max-width: 100%;
 }
 
-a {
-  color: inherit;
-  display: inline-block;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--default-padding);
 }
-
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  border: 0;
+.nav-links__link {
+  color: var(--color-very-dark-blue);
+  transition: color var(--timing-animation) ease-in-out;
 }
-
-ul,
-ol {
-  list-style: none;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-  scroll-padding-top: 4rem;
-}
-
-body {
-  font-size: 1.6rem;
-  font-family: "Rubik", sans-serif;
-  line-height: 1.3;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* End CSS Reset *//*# sourceMappingURL=style.css.map */
+.nav-links__link:hover {
+  color: var(--color-soft-red);
+}/*# sourceMappingURL=style.css.map */
