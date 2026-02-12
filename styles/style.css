@@ -89,12 +89,22 @@ a {
   padding: 0 var(--default-padding);
   gap: calc(var(--default-padding) * 4);
 }
+@media (max-width: 600px) {
+  .container {
+    gap: calc(var(--default-padding) * 2);
+  }
+}
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: var(--default-padding);
+}
+@media (max-width: 600px) {
+  .header {
+    font-size: 1.4rem;
+  }
 }
 
 .logoContent {
@@ -114,6 +124,11 @@ a {
   align-items: center;
   gap: var(--default-padding);
 }
+@media (max-width: 600px) {
+  .nav-links {
+    gap: calc(var(--default-padding) / 2);
+  }
+}
 .nav-links__link {
   color: var(--color-very-dark-blue);
   transition: color var(--timing-animation) ease-in-out;
@@ -126,6 +141,12 @@ a {
   display: flex;
   align-items: center;
   gap: calc(var(--default-padding) * 2);
+}
+@media (max-width: 600px) {
+  .section {
+    flex-direction: column;
+    gap: var(--default-padding);
+  }
 }
 .section__content {
   display: flex;
@@ -149,9 +170,20 @@ a {
   gap: var(--default-padding);
   margin-top: var(--default-padding);
 }
+@media (max-width: 600px) {
+  .section__button:not(.card__button) {
+    flex: 1;
+    text-align: center;
+  }
+}
 .section__imgContent {
   display: flex;
   flex: 1;
+}
+@media (max-width: 600px) {
+  .section__imgContent {
+    order: -1;
+  }
 }
 .section__img {
   max-width: 100%;
@@ -168,6 +200,11 @@ a {
   width: 100%;
   margin-top: calc(var(--default-padding) * 2);
   justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .cards {
+    flex-wrap: wrap;
+  }
 }
 
 .card {
@@ -204,6 +241,11 @@ a {
   top: calc(var(--default-padding) * -1.4);
   left: calc(var(--default-padding) * -1);
   right: calc(var(--default-padding) * -1);
+}
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
 }
 
 .faq {
@@ -272,4 +314,15 @@ a {
 }
 .footer__left {
   margin-right: auto;
+}
+@media (max-width: 600px) {
+  .footer__left {
+    margin-right: 0;
+  }
+}
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    gap: calc(var(--default-padding) / 2);
+  }
 }/*# sourceMappingURL=style.css.map */

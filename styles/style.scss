@@ -92,6 +92,10 @@ a {
   margin: 0 auto;
   padding: 0 var(--default-padding);
   gap: calc(var(--default-padding) * 4);
+
+  @media (max-width: 600px) {
+    gap: calc(var(--default-padding) * 2);
+  }
 }
 
 .header {
@@ -99,6 +103,10 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-top: var(--default-padding);
+
+  @media (max-width: 600px) {
+    font-size: 1.4rem;
+  }
 }
 
 .logoContent {
@@ -119,6 +127,10 @@ a {
   align-items: center;
   gap: var(--default-padding);
 
+  @media (max-width: 600px) {
+    gap: calc(var(--default-padding) / 2);
+  }
+
   &__link {
     color: var(--color-very-dark-blue);
     transition: color var(--timing-animation) ease-in-out;
@@ -133,6 +145,11 @@ a {
   display: flex;
   align-items: center;
   gap: calc(var(--default-padding) * 2);
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: var(--default-padding);
+  }
 
   &__content {
     display: flex;
@@ -161,9 +178,20 @@ a {
     margin-top: var(--default-padding);
   }
 
+  &__button:not(.card__button) {
+    @media (max-width: 600px) {
+      flex: 1;
+      text-align: center;
+    }
+  }
+
   &__imgContent {
     display: flex;
     flex: 1;
+
+    @media (max-width: 600px) {
+      order: -1;
+    }
   }
 
   &__img {
@@ -183,6 +211,10 @@ a {
   width: 100%;
   margin-top: calc(var(--default-padding) * 2);
   justify-content: space-between;
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+  }
 }
 
 .card {
@@ -223,6 +255,10 @@ a {
       left: calc(var(--default-padding) * -1);
       right: calc(var(--default-padding) * -1);
     }
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
   }
 }
 
@@ -301,5 +337,14 @@ a {
 
   &__left {
     margin-right: auto;
+
+    @media (max-width: 600px) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: calc(var(--default-padding) / 2);
   }
 }
