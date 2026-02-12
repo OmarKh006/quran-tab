@@ -76,6 +76,12 @@ a {
     background-color: var(--color-off-white);
     color: var(--color-very-dark-blue);
   }
+
+  &--disabled {
+    background-color: var(--color-grayish-blue);
+    cursor: not-allowed;
+    user-select: none;
+  }
 }
 
 .container {
@@ -141,6 +147,11 @@ a {
   &__description {
     font-size: 1.4rem;
     color: var(--color-grayish-blue);
+
+    .section--one-columun & {
+      max-width: 50rem;
+      text-align: center;
+    }
   }
 
   &__buttons {
@@ -156,5 +167,60 @@ a {
 
   &__img {
     max-width: 100%;
+  }
+
+  &--one-columun {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--default-padding) / 2);
+  }
+}
+
+.cards {
+  display: flex;
+  gap: var(--default-padding);
+  width: 100%;
+  margin-top: calc(var(--default-padding) * 2);
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.2);
+  border-radius: var(--default-radius);
+  width: 25rem;
+  height: 26rem;
+  padding: calc(var(--default-padding) * 2) var(--default-padding)
+    var(--default-padding);
+
+  &__img {
+    width: 6rem;
+    max-width: 100%;
+    margin-bottom: calc(var(--default-padding) / 2);
+  }
+
+  &__title {
+    font-size: 1.8rem;
+  }
+
+  &__button {
+    position: relative;
+    align-self: stretch;
+    text-align: center;
+    margin-top: auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../images/bg-dots.svg") repeat-x;
+      background-size: contain;
+      height: 0.3rem;
+      top: calc(var(--default-padding) * -1.4);
+      left: calc(var(--default-padding) * -1);
+      right: calc(var(--default-padding) * -1);
+    }
   }
 }
