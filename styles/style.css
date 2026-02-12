@@ -45,6 +45,7 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
+  overflow-x: hidden;
 }
 
 body {
@@ -250,4 +251,25 @@ a {
   max-height: 0.1rem;
   overflow: hidden;
   transition: all var(--timing-animation) ease-in-out;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: var(--default-padding) 0;
+  font-size: 1.4rem;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  background-color: var(--color-very-dark-blue);
+  z-index: -1;
+}
+.footer__left {
+  margin-right: auto;
 }/*# sourceMappingURL=style.css.map */
