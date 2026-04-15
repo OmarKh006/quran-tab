@@ -1,0 +1,24 @@
+{
+  "name": "quran-tab",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/OmarKh006/quran-tab#readme",
+  "bugs": {
+    "url": "https://github.com/OmarKh006/quran-tab/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmarKh006/quran-tab.git"
+  },
+  "license": "ISC",
+  "author": "Omar Khairy",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^8.0.8"
+  }
+}
